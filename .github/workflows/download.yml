@@ -24,7 +24,7 @@ jobs:
         run: pip install yt-dlp
 
       - name: Download Video
-        run: yt-dlp "${{ github.event.inputs.url }}" -o video.%(ext)s
+        run: yt-dlp "${{ github.event.inputs.url }}" -o "video.%(ext)s"
 
       - name: Upload Video
         uses: actions/upload-artifact@v4
